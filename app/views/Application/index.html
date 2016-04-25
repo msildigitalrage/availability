@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{set title:'Availability' /}
+<div class="row">
+    <div class="col-xs-6">
+        <h1>Devices availability</h1>
+
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-2">
+        #{form @Application.doAvailabilities(),role :'form'}
+                <div class="form-group">
+                    <label for="myDatePicker">Date:</label>
+                    <input type="text" class="form-control" id="myDatePicker" name="date" required="">
+                    #{if flash!=null}<span class="text-danger">${flash?.warning}</span>#{/if}
+                </div>
+                <button type="submit" class="btn btn-success">Check</button>
+        #{/form}
+    </div>
+</div>
+<script type="text/javascript">
+    // When the document is ready
+    $(document).ready(function () {
+        $('#myDatePicker').datepicker({
+            format: "dd/mm/yyyy"
+        });
+    });
+</script>

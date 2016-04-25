@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/css/datepicker.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/css/bootstrap.min.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.9.1.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/js/bootstrap-datepicker.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+    <div class="container-fluid">
+        #{doLayout /}
+    </div>
+    </body>
+</html>
